@@ -7,6 +7,7 @@ using System.Linq;
 using System.Media;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
 
 //Inspiration code: https://www.youtube.com/watch?time_continue=9&v=GJbVEZkeImk
@@ -16,8 +17,9 @@ namespace AlarmClock
     public partial class Alarm : Form
     {
         System.Timers.Timer timer;
+        SoundPlayer player = new SoundPlayer();
 
-        //delefate label threads are used to prevent the system from going into an inconsistent state
+        //delegate label threads are used to prevent the system from going into an inconsistent state
         //it's not safe to call a control from a thread without using the invoke method
         delegate void UpdateLable(Label lbl, string value);
         void UpdateDataLable(Label lbl, string value)
@@ -32,13 +34,16 @@ namespace AlarmClock
 
         private void Alarm_Load(object sender, EventArgs e)
         {
+            //start the timer
             timer = new System.Timers.Timer();
             timer.Interval = 1000;
             timer.Elapsed += Timer_Elapsed;
         }
 
+        //this function plays music from the time the timer starts till the time the user put
         private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
+            //calculate how much time has passed since timer began
             DateTime currentTIme = DateTime.Now;
             DateTime userTime = dateTimePicker.Value;
             if(currentTIme.Hour == userTime.Hour && currentTIme.Minute == userTime.Minute && currentTIme.Second == userTime.Second)
@@ -51,7 +56,7 @@ namespace AlarmClock
                     {
                         Invoke(upd, lblStatus, "Stop");
                     }
-                    SoundPlayer player = new SoundPlayer();
+                    
                     player.SoundLocation = @"C:\Windows\media\Alarm01.wav";
                     player.PlayLooping();
                 }
@@ -77,7 +82,32 @@ namespace AlarmClock
         {
             timer.Stop();
             lblStatus.Text = "Stop";
+            player.Stop();
         }
-        
+        private void Snooze_Click(object sender, EventArgs e)
+        {
+            //update label
+            lblStatus.Text = "Snoozing 5 minutes.";
+
+            //stop current timer
+            timer.Stop();
+            player.Stop();
+
+
+            try
+            {
+                timer = new System.Timers.Timer();
+
+                System.Threading.Thread.Sleep(5000);
+                timer.Start();
+
+                player.SoundLocation = @"C:\Windows\media\Alarm01.wav";
+                player.PlayLooping();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

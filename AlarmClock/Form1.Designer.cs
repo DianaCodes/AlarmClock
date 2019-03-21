@@ -32,6 +32,7 @@
             this.btnStart = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
             this.lblStatus = new System.Windows.Forms.Label();
+            this.Snooze = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dateTimePicker
@@ -72,11 +73,22 @@
             this.lblStatus.TabIndex = 4;
             this.lblStatus.Text = "Status";
             // 
+            // Snooze
+            // 
+            this.Snooze.Location = new System.Drawing.Point(129, 212);
+            this.Snooze.Name = "Snooze";
+            this.Snooze.Size = new System.Drawing.Size(126, 48);
+            this.Snooze.TabIndex = 6;
+            this.Snooze.Text = "Snooze";
+            this.Snooze.UseVisualStyleBackColor = true;
+            this.Snooze.Click += new System.EventHandler(this.Snooze_Click);
+            // 
             // Alarm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(391, 198);
+            this.ClientSize = new System.Drawing.Size(389, 287);
+            this.Controls.Add(this.Snooze);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.btnStart);
@@ -97,6 +109,7 @@
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button btnStop;
         private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Button Snooze;
     }
 }
 
