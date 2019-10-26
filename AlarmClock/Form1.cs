@@ -54,7 +54,7 @@ namespace AlarmClock
                     UpdateLable upd = UpdateDataLable;
                     if(lblStatus.InvokeRequired)
                     {
-                        Invoke(upd, lblStatus, "Stop");
+                        Invoke(upd, lblStatus, "Running...");
                     }
                     
                     player.SoundLocation = @"C:\Windows\media\Alarm01.wav";
@@ -86,18 +86,12 @@ namespace AlarmClock
         }
         private void Snooze_Click(object sender, EventArgs e)
         {
-            //update label
-            lblStatus.Text = "Snoozing 5 minutes.";
-
             //stop current timer
             timer.Stop();
             player.Stop();
-
-
+            
             try
             {
-                timer = new System.Timers.Timer();
-
                 System.Threading.Thread.Sleep(5000);
                 timer.Start();
 

@@ -69,9 +69,8 @@
             this.lblStatus.AutoSize = true;
             this.lblStatus.Location = new System.Drawing.Point(163, 87);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(68, 25);
+            this.lblStatus.Size = new System.Drawing.Size(0, 25);
             this.lblStatus.TabIndex = 4;
-            this.lblStatus.Text = "Status";
             // 
             // Snooze
             // 
@@ -87,6 +86,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightPink;
             this.ClientSize = new System.Drawing.Size(389, 287);
             this.Controls.Add(this.Snooze);
             this.Controls.Add(this.lblStatus);
@@ -96,7 +96,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Alarm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Alarm Clock";
             this.Load += new System.EventHandler(this.Alarm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

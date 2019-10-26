@@ -1,10 +1,10 @@
+C:\Users\Diana\xampp\htdocs\Sites\AlarmClock\AlarmClock\bin\Debug\AlarmClock.exe.config
+C:\Users\Diana\xampp\htdocs\Sites\AlarmClock\AlarmClock\bin\Debug\AlarmClock.exe
+C:\Users\Diana\xampp\htdocs\Sites\AlarmClock\AlarmClock\bin\Debug\AlarmClock.pdb
 C:\Users\Diana\xampp\htdocs\Sites\AlarmClock\AlarmClock\obj\Debug\AlarmClock.csprojAssemblyReference.cache
 C:\Users\Diana\xampp\htdocs\Sites\AlarmClock\AlarmClock\obj\Debug\AlarmClock.Alarm.resources
 C:\Users\Diana\xampp\htdocs\Sites\AlarmClock\AlarmClock\obj\Debug\AlarmClock.Properties.Resources.resources
 C:\Users\Diana\xampp\htdocs\Sites\AlarmClock\AlarmClock\obj\Debug\AlarmClock.csproj.GenerateResource.cache
 C:\Users\Diana\xampp\htdocs\Sites\AlarmClock\AlarmClock\obj\Debug\AlarmClock.csproj.CoreCompileInputs.cache
-C:\Users\Diana\xampp\htdocs\Sites\AlarmClock\AlarmClock\bin\Debug\AlarmClock.exe.config
-C:\Users\Diana\xampp\htdocs\Sites\AlarmClock\AlarmClock\bin\Debug\AlarmClock.exe
-C:\Users\Diana\xampp\htdocs\Sites\AlarmClock\AlarmClock\bin\Debug\AlarmClock.pdb
 C:\Users\Diana\xampp\htdocs\Sites\AlarmClock\AlarmClock\obj\Debug\AlarmClock.exe
 C:\Users\Diana\xampp\htdocs\Sites\AlarmClock\AlarmClock\obj\Debug\AlarmClock.pdb
